@@ -19,7 +19,6 @@ function getArray(){
         $count++;
     }
     rewind($file);
-    // Fill empty array @TODO
     $array = array_fill(0, $count -1, "");
     $count = 0;
 
