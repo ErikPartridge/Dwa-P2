@@ -10,19 +10,28 @@
         ?>
     </head>
     <body>
-        <form id ="input" action="index.php" method="post">
-            Number of words:    <input type="text" value="number" /><br>
-            First letter caps:  <input type="checkbox" value="capital"/><br>
-            Symbol in password: <input type="checkbox" value="symbol" /><br>
-            Number in password: <input type="checkbox" value="num" /><br>
+        <form action="#" method="GET">
+            Number of words:    <input name = "number" type="text" value="number" /><br>
+            First letter caps:  <input name = "capital" type="checkbox" value="capital"/><br>
+            Symbol in password: <input name = "symbol" type="checkbox" value="symbol" /><br>
+            Number in password: <input name = "num" type="checkbox" value="num" /><br>
             <input type="submit" value="Submit"/>
         </form>
         <code><?PHP
             if(isset($_GET["number"])){
                 $number = $_GET["number"];
-                $num = $_GET["num"];
-                $caps = $_GET["capital"];
-                $symbol = $_GET["symbol"];
+                $num = false;
+                if(isset($_GET["num"])){
+                    $num = $_GET["num"];
+                }
+                $caps = false;
+                if(isset($_GET["capital"])){
+                    $caps = $_GET["capital"];
+                }
+                $symbol = false;
+                if(isset($_GET["symbol"])){
+                    $symbol = $_GET["symbol"];
+                }
                 print(getPassword($number, $num, $caps, $symbol));
             }
             ?></code>
