@@ -8,4 +8,8 @@ available at http://p2.erikpartridge.com
 
 No external libraries used.
 
-Developed with PHPStorm
+Developed using PHPStorm.
+
+## Usage
+
+This website uses HTML5 validation. Usage of a modern browser is strongly advised.
