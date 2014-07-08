@@ -4,8 +4,6 @@
         <meta charset="UTF-8"/>
         <title>Password Generator</title>
         <?PHP
-        error_reporting(E_ALL);
-        ini_set('display_errors', 1);
         require 'Parser.php';
         ?>
         <link rel="stylesheet" type="text/css" href="style.css">
